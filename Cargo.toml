@@ -1,0 +1,21 @@
+[package]
+name = "p2p-hole-punching"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = { version = "1.12", features = ["attributes"] }
+async-trait = "0.1"
+env_logger = "0.10.0"
+futures = "0.3.28"
+futures-timer = "3.0"
+libp2p = {version = "0.52.3" ,features = ["async-std", "gossipsub", "mdns", "noise", "macros", "tcp", "yamux", "quic","relay","identify","dcutr","dns","kad","autonat"] }
+clap = { version = "4.3.23", features = ["derive"] }
+log = { version = "0.4", features = ["std", "serde"] }
+tracing="0.1.37"
+tracing-subscriber ="0.3.17"
+pretty_env_logger="0.5.0"
+tokio={version = "1.32.0",features = ["full"]}
